@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Shell
+  - Monster
+  - Obstacles
+  - Post Process
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Map
+    uniqueID: 3193325969
+    locked: 0
+  - name: Monsters
+    uniqueID: 2878430693
+    locked: 0
+  - name: Shells
+    uniqueID: 3677829381
+    locked: 0
+  - name: Character
+    uniqueID: 1573163245
+    locked: 0
+  - name: Vfx
+    uniqueID: 1213503949
+    locked: 0
+  - name: UI
+    uniqueID: 4235106975
+    locked: 0

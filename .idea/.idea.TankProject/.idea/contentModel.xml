@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Camputer\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Camputer\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_TankProject.-2088558257.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Camputer\Documents\UnityProjects\TankProject" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="BomberMonsterEditor.cs" t="Include" />
+          <e p="HeavyTankEditor.cs" t="Include" />
+          <e p="TankShellEditor.cs" t="Include" />
+        </e>
+        <e p="Lib" t="Include">
+          <e p="Core" t="Include">
+            <e p="Extensions.cs" t="Include" />
+            <e p="Wait.cs" t="Include" />
+          </e>
+        </e>
+        <e p="ObjectPool" t="Include">
+          <e p="IPoolable.cs" t="Include" />
+          <e p="Pool.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Armor.cs" t="Include" />
+          <e p="CameraFollow.cs" t="Include" />
+          <e p="Controllers" t="Include">
+            <e p="SimpleMonsterMovementController.cs" t="Include" />
+            <e p="TankMovementController.cs" t="Include" />
+            <e p="TankWeaponController.cs" t="Include" />
+          </e>
+          <e p="Explode.cs" t="Include" />
+          <e p="ExplosionData.cs" t="Include" />
+          <e p="GameZone.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
+          <e p="HealthBar.cs" t="Include" />
+          <e p="Inputs" t="Include">
+            <e p="GameInput.cs" t="Include" />
+            <e p="SeekerMovementInput.cs" t="Include" />
+            <e p="TankMovementInput.cs" t="Include" />
+            <e p="TankWeaponInput.cs" t="Include" />
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="IController.cs" t="Include" />
+            <e p="IDamagable.cs" t="Include" />
+            <e p="IGameInput.cs" t="Include" />
+            <e p="IMovementInput.cs" t="Include" />
+            <e p="IWeaponInput.cs" t="Include" />
+          </e>
+          <e p="Managers" t="Include">
+            <e p="GameManager.cs" t="Include" />
+            <e p="Monstermanager.cs" t="Include" />
+            <e p="TankManager.cs" t="Include" />
+            <e p="VfxManager.cs" t="Include" />
+          </e>
+          <e p="Pools" t="Include">
+            <e p="ShellPool.cs" t="Include" />
+            <e p="UnitPool.cs" t="Include" />
+            <e p="VfxPool.cs" t="Include" />
+          </e>
+          <e p="ScreenLogger.cs" t="Include" />
+          <e p="Shell" t="Include">
+            <e p="LaserShell.cs" t="Include" />
+            <e p="ShellBehaviour.cs" t="Include" />
+            <e p="TankShell.cs" t="Include" />
+          </e>
+          <e p="Spawners" t="Include">
+            <e p="HeavyTankSpawner.cs" t="Include" />
+            <e p="MonsterSpawner.cs" t="Include" />
+          </e>
+          <e p="StartBox.cs" t="Include" />
+          <e p="TowerBehaviour.cs" t="Include" />
+          <e p="Units" t="Include">
+            <e p="AliveUnitBehaviour.cs" t="Include" />
+            <e p="BomberMonster.cs" t="Include" />
+            <e p="HeavyTank.cs" t="Include" />
+            <e p="MonsterBehaviour.cs" t="Include" />
+            <e p="SimpleMonster.cs" t="Include" />
+            <e p="UnitBehaviour.cs" t="Include" />
+            <e p="WallBlock.cs" t="Include" />
+          </e>
+          <e p="Vfx" t="Include">
+            <e p="ExplosionEffect.cs" t="Include" />
+            <e p="VfxBehaviour.cs" t="Include" />
+          </e>
+          <e p="Weapon" t="Include">
+            <e p="LaserGun.cs" t="Include" />
+            <e p="TankCannon.cs" t="Include" />
+            <e p="WeaponBehaviour.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="TankProject.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
