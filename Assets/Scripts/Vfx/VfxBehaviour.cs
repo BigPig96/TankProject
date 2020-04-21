@@ -3,10 +3,8 @@ using UnityEngine;
 
 namespace TankProject.Vfx
 {
-    public abstract class VfxBehaviour : MonoBehaviour, IPoolable<VfxBehaviour>
+    public abstract class VfxBehaviour : MonoBehaviour
     {
-        public Pool<VfxBehaviour> Pool { get; set; }
-
         public void Enable(Vector2 position, Quaternion rotation)
         {
             transform.position = position;
@@ -15,10 +13,9 @@ namespace TankProject.Vfx
             gameObject.SetActive(true);
         }
 
-        public void Disable()
+        public virtual void Disable()
         {
             gameObject.SetActive(false);
-            Pool?.ToPool(this);
         }
     }
 }

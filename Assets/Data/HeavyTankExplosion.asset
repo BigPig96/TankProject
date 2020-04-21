@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: HeavyTankExplosion
   m_EditorClassIdentifier: 
   damage: 150
-  lesionRadius: 15
-  maxTargets: 8
+  lesionRadius: 7
+  maxTargets: 5
   targetsMask:
     serializedVersion: 2
     m_Bits: 3072

@@ -1,32 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using ObjectPool;
-using TankProject;
-using TankProject.Vfx;
+﻿using ObjectPool;
 using UnityEngine;
+using Zenject;
 
 namespace TankProject.Units
 {
-    public sealed class BomberMonster : MonsterBehaviour
+    public sealed class BomberMonster : SeekerMonster, ObjectPool.IPoolable<BomberMonster>
     {
-        [SerializeField] private float attackDelay;
-        [SerializeField] private ExplosionData explosion;
-        public float LesionRadius => explosion.lesionRadius;
+        public Pool<BomberMonster> Pool { get; set; }
 
         private Explode _explode;
         private bool _isExploded;
-        private float _attackTimer;
 
-        protected override void Awake()
+        [Inject]
+        private void InstallBindings(Explode explode)
         {
-            base.Awake();
-            
-            _explode = new Explode(explosion);
-        }
-
-        private void Update()
-        {
-            Process();
+            _explode = explode;
         }
 
         public override void Enable(Vector2 position, Quaternion rotation)
@@ -36,26 +24,24 @@ namespace TankProject.Units
             _isExploded = false;
         }
 
+        protected override void OnAttack()
+        {
+            if(!_isExploded)
+                OnDie();
+        }
+
+        public override void Disable()
+        {
+            base.Disable();
+            
+            Pool?.ToPool(this);
+        }
+
         protected override void OnDie()
         {
             base.OnDie();
             
             Explode();
-        }
-
-        private void Process()
-        {
-            Move();
-            Attack();
-        }
-
-        protected override void Attack()
-        {
-            if(HitUnit == null || _isExploded) return;
-            _attackTimer += Time.deltaTime;
-            if (!(_attackTimer > attackDelay)) return;
-            _attackTimer = 0;
-            OnDie();
         }
 
         private void Explode()

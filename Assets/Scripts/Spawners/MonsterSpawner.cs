@@ -1,32 +1,32 @@
 ﻿using ObjectPool;
-using TankProject.Units;
 using UnityEngine;
+using Zenject;
 using Random = UnityEngine.Random;
 
 namespace TankProject.Spawners
 {
-    public sealed class MonsterSpawner : MonoBehaviour
+    public class MonsterSpawner<T> : SpawnerBase where T : ObjectPool.IPoolable<T>
     {
-        [SerializeField] private MonsterBehaviour monsterPrefab;
-        [SerializeField] private Transform[] spawnPoints;
+        [SerializeField] protected Transform[] _spawnPoints;
         
-        private Pool<UnitBehaviour> _pool;
-
-        private void Awake()
+        private Pool<T> _pool;
+        
+        [Inject]
+        public void InstallBindings(Pool<T> pool)
         {
-            _pool = Pool<UnitBehaviour>.Create(monsterPrefab, 10, "Monsters");
+            _pool = pool;
         }
 
-        public void SpawnRandom()
+        public override void Spawn()
         {
-            int randomIndex = Random.Range(0, spawnPoints.Length);
+            int randomIndex = Random.Range(0, _spawnPoints.Length);
 
-            IPoolable<UnitBehaviour> monster = _pool.FromPool();
-            var spawnPoint = spawnPoints[randomIndex];
+            var monster = _pool.FromPool();
+            var spawnPoint = _spawnPoints[randomIndex];
             monster.Enable(spawnPoint.position, spawnPoint.rotation);
         }
 
-        public void DeleteMonsters()
+        public override void DeleteAll()
         {
             _pool.ToPoolAll();
         }

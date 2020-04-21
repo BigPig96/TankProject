@@ -2,24 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73e87c32-1ac6-4c9b-a047-c5cae8adb026" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawners/BomberMonsterSpawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawners/BomberMonsterSpawner.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawners/TankMonsterSpawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawners/TankMonsterSpawner.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TankProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TankProject/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TankProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TankProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TankProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TankProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/HeavyTankExplosion.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/HeavyTankExplosion.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/BomberMonsterEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/BomberMonsterEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/HeavyTankEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/HeavyTankEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/TankShellEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/TankShellEditor.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ObjectPool/Pool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ObjectPool/Pool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/VfxManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/VfxManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/ShellPool.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/ShellPool.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/UnitPool.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/UnitPool.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/VfxPool.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/VfxPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Monster 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Monster 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Monster 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Monster 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Monster 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Monster 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/WallBlock.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/WallBlock.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shells.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shells/LaserShell.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shells/LaserShell.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shells/TankShell.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shells/TankShell.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tanks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tanks/HeavyTank.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tanks/HeavyTank.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Vfx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Vfx/Explosion.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Vfx/Explosion.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Explode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Explode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inputs/SeekerMovementInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inputs/SeekerMovementInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inputs/StandloneStartInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inputs/StandloneStartInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/MonsterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MonsterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TankManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TankManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/VfxManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/VfxManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shell/LaserShell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shell/LaserShell.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shell/ShellBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shell/ShellBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shell/TankShell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shell/TankShell.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawners/HeavyTankSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawners/HeavyTankSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawners/MonsterSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawners/MonsterSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/BomberMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/BomberMonster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/HeavyTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/HeavyTank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/MonsterBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/MonsterBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/MovableUnitBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/MovableUnitBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/SimpleMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/SeekerMonster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/SimpleMonster.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/SeekerMonster.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/UnitBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/UnitBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vfx/ExplosionEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vfx/ExplosionEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vfx/VfxBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vfx/VfxBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/LaserGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/LaserGun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/TankCannon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/TankCannon.cs" afterDir="false" />
@@ -48,27 +90,39 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D815B7EF-AC42-4EEB-8E05-3965CCCB1F98/0e/c35b5408/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Factories/VfxFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawners/SimpleMonsterSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/183CC947-3B1E-4A2E-9649-7B45BF64605B/ed/cfd291c2/PhysicsScene2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Lib/Core/Extensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Factories/UnitFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawners/BomberMonsterSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Lib/Core/Wait.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/183CC947-3B1E-4A2E-9649-7B45BF64605B/3e/5ac75a04/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IScreenLogger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Vfx/ExplosionEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Vfx/VfxBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ExplosionData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScreenLogger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameEventScreenLogger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ObjectPool/IPoolable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/SimpleMonster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Explode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ObjectPool/Pool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/TankMonster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawners/SpawnerBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StartBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Armor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TowerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Main/DiContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/SimpleMonsterMovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TankWeaponController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TankMovementController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IGameInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installs/GameSceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Factories/IFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IStartInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamagable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IMovementInput.cs" root0="FORCE_HIGHLIGHTING" />
@@ -76,26 +130,25 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawners/HeavyTankSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawners/MonsterSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/MonsterManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/VfxManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/TankManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/LaserGun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/TankCannon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Factories/ResourcesPrefabFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inputs/TankMovementInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inputs/GameInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inputs/SeekerMovementInput.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inputs/StandloneStartInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inputs/SeekerMovementInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inputs/TankWeaponInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/AliveUnitBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/SimpleMonster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/MovableUnitBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/SeekerMonster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/UnitBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/HeavyTank.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawners/TankMonsterSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/MonsterBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Editor/BomberMonsterEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Editor/HeavyTankEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/BomberMonster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C074160-DD1A-4D91-9B45-B6E4C27A3BAC/6e/6ae1956b/Array.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Editor/TankShellEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D815B7EF-AC42-4EEB-8E05-3965CCCB1F98/83/3e6f71d1/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shell/ShellBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shell/LaserShell.cs" root0="FORCE_HIGHLIGHTING" />
@@ -104,57 +157,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pools/VfxPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/TankShellEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/SimpleMonsterMovementController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TankMovementController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Lib/Core/Wait.cs" />
-        <option value="$PROJECT_DIR$/Assets/Lib/Core/Extensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/Units/WallBlock.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ExplosionData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/Shell/TankShell.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/Units/SimpleMonster.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/Units/BomberMonster.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/Shell/ShellBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/Shell/LaserShell.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/BomberMonsterEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/HeavyTankEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/Units/UnitBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/Units/MonsterBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/Units/HeavyTank.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IGameInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inputs/GameInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonsterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TankManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TankManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inputs/SeekerMovementInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Units/MonsterBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StartBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/VfxManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TankWeaponController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/MonsterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IStartInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IScreenLogger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScreenLogger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Units/BomberMonster.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Explode.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Units/HeavyTank.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shell/TankShell.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shell/LaserShell.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/TankCannon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/VfxManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/LaserGun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spawners/HeavyTankSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameEventScreenLogger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Health.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/ShellFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/UnitFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/VfxFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Pools/LaserShellPool.cs" />
         <option value="$PROJECT_DIR$/Assets/ObjectPool/Pool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Vfx/VfxBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shell/ShellBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Units/UnitBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Units/MovableUnitBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Units/MonsterBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/LaserShellFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/ResourcesPrefabFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Units/SeekerMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inputs/StandloneStartInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/LaserGun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/TankCannon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawners/MonsterSpawnerBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawners/SpawnerBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/MonsterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawners/MonsterSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TankManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawners/BomberMonsterSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawners/SimpleMonsterSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawners/TankMonsterSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Vfx/VfxBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Vfx/ExplosionEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shell/ShellBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shell/LaserShell.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Units/UnitBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Units/SimpleMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Units/TankMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/VfxManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawners/HeavyTankSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Explode.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inputs/SeekerMovementInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installs/GameSceneInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Units/BomberMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shell/TankShell.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Units/HeavyTank.cs" />
       </list>
     </option>
   </component>
@@ -178,10 +231,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5812">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12200">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="5812" />
+      <option name="pid" value="12200" />
       <method v="2" />
     </configuration>
   </component>
@@ -204,7 +257,7 @@
       <workItem from="1587232753882" duration="235000" />
       <workItem from="1587287176945" duration="33135000" />
       <workItem from="1587361153590" duration="1220000" />
-      <workItem from="1587457121835" duration="2560000" />
+      <workItem from="1587457121835" duration="24767000" />
     </task>
     <servers />
   </component>
@@ -213,116 +266,114 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state width="414" height="466" key="DebuggerActiveHint" timestamp="1587147849728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="414" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1587147849728" />
-    <state width="1877" height="344" key="GridCell.Tab.0.bottom" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.0.bottom" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.0.center" timestamp="1587459729055">
+    <state width="1877" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.0.center" timestamp="1587491997994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729055" />
-    <state width="1877" height="344" key="GridCell.Tab.0.left" timestamp="1587459729055">
+    <state width="1877" height="344" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997994" />
+    <state width="1877" height="344" key="GridCell.Tab.0.left" timestamp="1587491997994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729055" />
-    <state width="1877" height="344" key="GridCell.Tab.0.right" timestamp="1587459729055">
+    <state width="1877" height="344" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997994" />
+    <state width="1877" height="344" key="GridCell.Tab.0.right" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729055" />
-    <state width="1877" height="344" key="GridCell.Tab.1.bottom" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.1.bottom" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.1.center" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.1.center" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.1.left" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.1.left" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.1.right" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.1.right" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.2.bottom" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.2.bottom" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.2.center" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.2.center" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.2.left" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.2.left" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.2.right" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.2.right" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.3.bottom" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.3.bottom" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.3.center" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.3.center" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.3.left" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.3.left" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state width="1877" height="344" key="GridCell.Tab.3.right" timestamp="1587459729056">
+    <state width="1877" height="344" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state width="1877" height="344" key="GridCell.Tab.3.right" timestamp="1587491997995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587459729056" />
-    <state x="794" y="220" key="RiderGenerateDialog" timestamp="1587216463827">
+    <state width="1877" height="344" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587491997995" />
+    <state x="794" y="220" key="RiderGenerateDialog" timestamp="1587485068444">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="220" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587216463827" />
+    <state x="794" y="220" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587485068444" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1587319571799">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587319571799" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587459650849">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587492606012">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587459650849" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587492606012" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Spawners/HeavyTankSpawner.cs</url>
-          <line>20</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Spawners/HeavyTankSpawner.cs" initialLine="20">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Units/MonsterBehaviour.cs</url>
+          <line>45</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Units/MonsterBehaviour.cs" initialLine="45">
             <startOffsets>
-              <option value="510" />
+              <option value="1234" />
             </startOffsets>
             <endOffsets>
-              <option value="542" />
+              <option value="1261" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MonsterManager.cs</url>
-          <line>58</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Managers/MonsterManager.cs" initialLine="58">
-            <startOffsets>
-              <option value="1437" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1495" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

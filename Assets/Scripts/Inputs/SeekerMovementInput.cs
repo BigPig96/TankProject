@@ -1,5 +1,6 @@
-﻿using TankProject.Managers;
+﻿using TankProject.Units;
 using UnityEngine;
+using Zenject;
 
 namespace TankProject.Inputs
 {
@@ -9,7 +10,7 @@ namespace TankProject.Inputs
 
         private void Start()
         {
-            _target = TankManager.Instance.TankTransform;
+            _target = HeavyTank.Tank.transform;
         }
 
         public Vector2 MoveDirection()

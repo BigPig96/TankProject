@@ -21,8 +21,6 @@ namespace TankProject.Units
             _rb = GetComponent<Rigidbody2D>();
         }
 
-        protected abstract void Attack();
-
         private void OnCollisionEnter2D(Collision2D other)
         {
             var unit = other.collider.GetComponent<IDamagable>();
@@ -45,8 +43,10 @@ namespace TankProject.Units
 
         protected override void OnDie()
         {
-            OnMonsterDie?.Invoke(this);
             base.OnDie();
+            
+            OnMonsterDie?.Invoke(this);
+            Debug.Log(name);
         }
 
         public void ChangeBodyType(RigidbodyType2D type)

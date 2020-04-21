@@ -1,12 +1,15 @@
-﻿using UnityEngine;
+﻿using ObjectPool;
+using UnityEngine;
 
 namespace TankProject.Shells
 {
-    public sealed class LaserShell : ShellBehaviour
+    public sealed class LaserShell : ShellBehaviour, IPoolable<LaserShell>
     {
+        public Pool<LaserShell> Pool { get; set; }
+
         [SerializeField] private float damage;
         [SerializeField] private LayerMask damageMask;
-
+        
         public override void Enable(Vector2 position, Quaternion rotation)
         {
             base.Enable(position, rotation);
@@ -21,6 +24,12 @@ namespace TankProject.Shells
                 unit?.TakeDamage(damage);
             
             base.OnCollisionEnter2D(other);
+        }
+
+        public override void Disable()
+        {
+            base.Disable();
+            Pool?.ToPool(this);
         }
     }
 }

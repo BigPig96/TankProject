@@ -6,10 +6,8 @@ namespace TankProject.Units
 {
     [RequireComponent(typeof(Health))]
     [RequireComponent(typeof(Armor))]
-    public abstract class UnitBehaviour : MonoBehaviour, IDamagable, IPoolable<UnitBehaviour>
+    public abstract class UnitBehaviour : MonoBehaviour, IDamagable
     {
-        public Pool<UnitBehaviour> Pool { get; set; }
-
         private Health _health;
         private Armor _armor;
 
@@ -18,6 +16,7 @@ namespace TankProject.Units
             _health = GetComponent<Health>();
             _armor = GetComponent<Armor>();
         }
+        
 
         protected virtual void OnDie()
         {
@@ -44,11 +43,10 @@ namespace TankProject.Units
             gameObject.SetActive(true);
         }
 
-        public void Disable()
+        public virtual void Disable()
         {
-            _health.OnDie += OnDie;
+            _health.OnDie -= OnDie;
             gameObject.SetActive(false);
-            Pool?.ToPool(this);
         }
     }
 }

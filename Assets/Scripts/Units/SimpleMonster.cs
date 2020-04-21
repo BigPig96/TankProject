@@ -1,33 +1,24 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using ObjectPool;
+using UnityEngine;
 
 namespace TankProject.Units
 {
-    public sealed class SimpleMonster : MonsterBehaviour
+    public class SimpleMonster : SeekerMonster, IPoolable<SimpleMonster>
     {
+        public Pool<SimpleMonster> Pool { get; set; }
+
         [SerializeField] private float damage;
-        [SerializeField] private float attackDelay;
-        
-        private float _attackTimer;
 
-        private void Update()
+        protected override void OnAttack()
         {
-            Process();
-        }
-
-        private void Process()
-        {
-            Attack();
-            Move();
-        }
-
-        protected override void Attack()
-        {
-            if (HitUnit == null) return;
-            _attackTimer += Time.deltaTime;
-            if (!(_attackTimer > attackDelay)) return;
-            _attackTimer = 0;
             HitUnit.TakeDamage(damage);
+        }
+
+        public override void Disable()
+        {
+            base.Disable();
+            
+            Pool?.ToPool(this);
         }
     }
 }

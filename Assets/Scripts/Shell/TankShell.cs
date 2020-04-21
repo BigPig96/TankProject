@@ -1,30 +1,33 @@
-﻿using Lib;
-using ObjectPool;
+﻿using ObjectPool;
 using UnityEngine;
+using Zenject;
 
 namespace TankProject.Shells
 {
-    public sealed class TankShell : ShellBehaviour
+    public sealed class TankShell : ShellBehaviour, ObjectPool.IPoolable<TankShell>
     {
-        [SerializeField] private ExplosionData explosion;
-        [SerializeField] private float reloadingTime;
-
-        public float LesionRadius => explosion.lesionRadius;
+        public Pool<TankShell> Pool { get; set; }
 
         private Explode _explode;
 
-        protected override void Awake()
+        [Inject]
+        private void InstallBindings(Explode explode)
         {
-            base.Awake();
-
-            _explode = new Explode(explosion);
+            _explode = explode;
         }
-
+        
         public override void Enable(Vector2 position, Quaternion rotation)
         {
             base.Enable(position, rotation);
 
             RBody.velocity = transform.up * speed;
+        }
+
+        public override void Disable()
+        {
+            base.Disable();
+            
+            Pool?.ToPool(this);
         }
 
         protected override void Destruct()

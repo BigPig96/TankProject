@@ -6,12 +6,10 @@ using UnityEngine;
 namespace TankProject.Shells
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public abstract class ShellBehaviour : MonoBehaviour, IPoolable<ShellBehaviour>
+    public abstract class ShellBehaviour : MonoBehaviour
     {
         [SerializeField] protected float lifetime;
         [SerializeField] protected float speed;
-
-        public Pool<ShellBehaviour> Pool { get; set; }
 
         protected Rigidbody2D RBody;
 
@@ -43,10 +41,9 @@ namespace TankProject.Shells
             _destruction.Start();
         }
 
-        public void Disable()
+        public virtual void Disable()
         {
             gameObject.SetActive(false);
-            Pool?.ToPool(this);
         }
     }
 }

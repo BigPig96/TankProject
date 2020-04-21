@@ -1,33 +1,37 @@
 ﻿using System;
 using ObjectPool;
-using TankProject.Managers;
-using TankProject.Vfx;
 using UnityEngine;
+using Zenject;
 
 namespace TankProject.Units
 {
-    public sealed class HeavyTank : MovableUnitBehaviour
+    public sealed class HeavyTank : MovableUnitBehaviour, ObjectPool.IPoolable<HeavyTank>
     {
+        public static HeavyTank Tank { get; private set; }
+        public Pool<HeavyTank> Pool { get; set; }
         public static event Action OnPlayerDie;
         
         [SerializeField] private TowerBehaviour towerBehaviour;
-        [SerializeField] private ExplosionData dieExplosion;
 
-        public float LesionRadius => dieExplosion.lesionRadius;
-        
         private IWeaponInput _weaponInput;
         private IController<IWeaponInput> _weaponController;
 
         private Explode _explode;
 
+        [Inject]
+        private void InstallBindings(Explode explode)
+        {
+            _explode = explode;
+        }
+
         protected override void Awake()
         {
             base.Awake();
-
+            
+            Tank = this;
+            
             _weaponInput = GetComponent<IWeaponInput>();
             _weaponController = GetComponent<IController<IWeaponInput>>();
-            
-            _explode = new Explode(dieExplosion);
         }
 
         protected override void OnDie()
@@ -38,16 +42,18 @@ namespace TankProject.Units
             base.OnDie();
         }
 
-        private void Update()
+        public override void Disable()
         {
-            Process();
+            base.Disable();
+            
+            Pool?.ToPool(this);
         }
 
-        private void Process()
+        protected override void Update()
         {
-            Move();
+            base.Update();
+            
             Weapon();
-
             RotateTower();
         }
 

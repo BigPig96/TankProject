@@ -13,7 +13,12 @@
             _movementController = GetComponent<IController<IMovementInput>>();
         }
 
-        protected void Move()
+        protected virtual void Update()
+        {
+            Move();
+        }
+
+        private void Move()
         {
             _movementController.Control(_movementInput);
         }

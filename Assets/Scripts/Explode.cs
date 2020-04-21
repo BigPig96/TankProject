@@ -11,13 +11,16 @@ namespace TankProject
         private readonly float _lesionRadius;
         private readonly Collider2D[] _targets;
         private readonly LayerMask _damageMask;
+        private readonly Pool<ExplosionEffect> _pool;
 
-        public Explode(ExplosionData data)
+        public Explode(ExplosionData data, Pool<ExplosionEffect> pool)
         {
             _damage = data.damage;
             _lesionRadius = data.lesionRadius;
             _targets = new Collider2D[data.maxTargets];
             _damageMask = data.targetsMask;
+
+            _pool = pool;
         }
 
         public void Execute(Vector2 position)
@@ -33,8 +36,8 @@ namespace TankProject
                 damagable?.TakeDamage(_damage);
             }
             
-            IPoolable<VfxBehaviour> vfx = VfxManager.Instance.ExplosionEffectPool.FromPool();
-            vfx.Enable(position, Quaternion.identity);
+            var effect = _pool.FromPool();
+            effect.Enable(position, Quaternion.identity);
         }
     }
 }

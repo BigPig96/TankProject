@@ -1,7 +1,4 @@
-﻿using System;
-using TankProject;
-using TankProject.Spawners;
-using TankProject.Units;
+﻿using TankProject.Spawners;
 using UnityEngine;
 
 namespace TankProject.Managers
@@ -11,8 +8,7 @@ namespace TankProject.Managers
         public static TankManager Instance { get; private set; }
 
         [SerializeField] private HeavyTankSpawner tankSpawner;
-
-        public Transform TankTransform { get; private set; }
+        
 
         private void Awake()
         {
@@ -32,7 +28,7 @@ namespace TankProject.Managers
 
         private void OnGameStarted()
         {
-            TankTransform = tankSpawner.SpawnTank().transform;
+            tankSpawner.Spawn();
         }
     }
 }

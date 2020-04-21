@@ -1,6 +1,7 @@
 ﻿using System;
 using TankProject.Units;
 using UnityEngine;
+using Zenject;
 
 namespace TankProject.Managers
 {
@@ -21,13 +22,18 @@ namespace TankProject.Managers
 
         private IStartInput _startInput;
 
+        [Inject]
+        private void InstallBindings(IStartInput startInput)
+        {
+            _startInput = startInput;
+        }
+
         private void Awake()
         {
             if (Instance == null) Instance = this;
             else Destroy(gameObject);
             
             State = GameState.ReadyToStart;
-            _startInput = GetComponent<IStartInput>();
         }
 
         private void OnEnable()

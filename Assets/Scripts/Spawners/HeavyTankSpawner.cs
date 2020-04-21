@@ -1,26 +1,31 @@
 ﻿using ObjectPool;
 using TankProject.Units;
 using UnityEngine;
+using Zenject;
 
 namespace TankProject.Spawners
 {
-    public sealed class HeavyTankSpawner : MonoBehaviour
+    public sealed class HeavyTankSpawner : SpawnerBase
     {
-        [SerializeField] private HeavyTank tankPrefab;
         [SerializeField] private Transform spawnPoint;
 
-        private Pool<UnitBehaviour> _tankPool;
+        private Pool<HeavyTank> _tankPool;
 
-        private void Awake()
+        [Inject]
+        private void InstallBindings(Pool<HeavyTank> pool)
         {
-            _tankPool = Pool<UnitBehaviour>.Create(tankPrefab, 1, "TankPool");
+            _tankPool = pool;
         }
-
-        public UnitBehaviour SpawnTank()
+        
+        public override void Spawn()
         {
             var tank = _tankPool.FromPool();
             tank.Enable(spawnPoint.position, spawnPoint.rotation);
-            return (UnitBehaviour)tank;
+        }
+
+        public override void DeleteAll()
+        {
+            _tankPool.ToPoolAll();
         }
     }
 }

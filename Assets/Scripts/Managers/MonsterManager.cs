@@ -1,5 +1,4 @@
-﻿using Lib;
-using TankProject.Spawners;
+﻿using TankProject.Spawners;
 using TankProject.Units;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -13,7 +12,7 @@ namespace TankProject.Managers
         public int KilledCount { get; private set; }
 
         [SerializeField] private int monstersOnScene;
-        [SerializeField] private MonsterSpawner[] monsterSpawners;
+        [SerializeField] private SpawnerBase[] spawners;
         
         private void Awake()
         {
@@ -56,15 +55,15 @@ namespace TankProject.Managers
 
         private void SpawnRandomMonster()
         {
-            int randomIndex = Random.Range(0, monsterSpawners.Length);
-            monsterSpawners[randomIndex].SpawnRandom();
+            int randomIndex = Random.Range(0, spawners.Length);
+            spawners[randomIndex].Spawn();
         }
 
         private void DeleteAllMonsters()
         {
-            foreach (var monsterSpawner in monsterSpawners)
+            foreach (var spawner in spawners)
             {
-                monsterSpawner.DeleteMonsters();
+                spawner.DeleteAll();
             }
         }
     }

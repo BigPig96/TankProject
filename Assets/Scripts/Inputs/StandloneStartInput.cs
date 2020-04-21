@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public sealed class StandloneStartInput : MonoBehaviour, IStartInput
+public sealed class StandloneStartInput : IStartInput
 {
     public bool IsGameStart() => Input.GetKeyDown(KeyCode.Space);
 }
