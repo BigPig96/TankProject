@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace TankProject
 {
-    public sealed class ScreenLogger : MonoBehaviour
+    public sealed class GameEventScreenLogger : MonoBehaviour, IScreenLogger
     {
         [TextArea(5, 20)] [SerializeField] private string message;
         [SerializeField] private Text messageText;
@@ -37,12 +37,12 @@ namespace TankProject
             ShowMessage();
         }
 
-        private void ShowMessage()
+        public void ShowMessage()
         {
             messageText.text = string.Format(message, MonsterManager.Instance.KilledCount.ToString());
         }
 
-        private void ClearMessage()
+        public void ClearMessage()
         {
             messageText.text = "";
         }

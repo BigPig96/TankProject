@@ -1,6 +1,5 @@
 ﻿using System;
 using ObjectPool;
-using TankProject.Pools;
 using TankProject.Shells;
 using UnityEngine;
 
@@ -11,11 +10,11 @@ namespace TankProject.Weapon
         [SerializeField] private LaserShell laserPrefab;
         [SerializeField] private Transform launchPoint;
 
-        private ShellPool _shellPool;
+        private Pool<ShellBehaviour> _shellPool;
 
         public override void Initialize()
         {
-            _shellPool = ShellPool.Create(laserPrefab, 10, "Lasers");
+            _shellPool = Pool<ShellBehaviour>.Create(laserPrefab, 10, "Lasers");
             State = WeaponState.Idle;
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace TankProject.Units
 {
-    public abstract class AliveUnitBehaviour : UnitBehaviour
+    public abstract class MovableUnitBehaviour : UnitBehaviour
     {
         private IMovementInput _movementInput;
         private IController<IMovementInput> _movementController;

@@ -27,16 +27,11 @@ namespace TankProject.Shells
             RBody.velocity = transform.up * speed;
         }
 
-        public override void Disable()
+        protected override void Destruct()
         {
             Explode();
 
-            base.Disable();
-        }
-
-        private void OnCollisionEnter2D(Collision2D other)
-        {
-            Disable();
+            base.Destruct();
         }
 
         private void Explode()

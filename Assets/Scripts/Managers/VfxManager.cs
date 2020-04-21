@@ -1,4 +1,4 @@
-﻿using TankProject.Pools;
+﻿using ObjectPool;
 using TankProject.Vfx;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ namespace TankProject
     {
         public static VfxManager Instance { get; private set; }
 
-        public VfxPool ExplosionEffectPool { get; private set; }
+        public Pool<VfxBehaviour> ExplosionEffectPool { get; private set; }
 
         [SerializeField] private ExplosionEffect explosionEffect;
 
@@ -20,7 +20,7 @@ namespace TankProject
 
         private void Start()
         {
-            ExplosionEffectPool = VfxPool.Create(explosionEffect, 10, "Explosions");
+            ExplosionEffectPool = Pool<VfxBehaviour>.Create(explosionEffect, 10, "Explosions");
         }
     }
 }

@@ -9,14 +9,9 @@ namespace TankProject
         public event Action<float> OnHealthChanged;
         public event Action OnDie;
 
-        [FormerlySerializedAs("startHealth")] [SerializeField] private float maxHealth = 100f;
+        [SerializeField] private float maxHealth = 100f;
         public float MaxHealth => maxHealth;
         public float CurrentHealth { get; private set; }
-
-        private void Start()
-        {
-            ResetHealth();
-        }
 
         public void ResetHealth()
         {
@@ -36,8 +31,7 @@ namespace TankProject
         
         private void ChangeHealth(float health)
         {
-            CurrentHealth = health;
-            CurrentHealth = Mathf.Clamp(CurrentHealth, 0, maxHealth);
+            CurrentHealth = Mathf.Clamp(health, 0, maxHealth);
             OnHealthChanged?.Invoke(CurrentHealth);
         }
     }

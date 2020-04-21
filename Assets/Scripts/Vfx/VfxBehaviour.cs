@@ -18,7 +18,7 @@ namespace TankProject.Vfx
         public void Disable()
         {
             gameObject.SetActive(false);
-            if (Pool != null) Pool.ToPool(this);
+            Pool?.ToPool(this);
         }
     }
 }

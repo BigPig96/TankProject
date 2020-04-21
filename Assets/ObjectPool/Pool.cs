@@ -3,46 +3,54 @@ using UnityEngine;
 
 namespace ObjectPool
 {
-    public abstract class Pool<T> : MonoBehaviour where T : IPoolable<T>
+    public class Pool<T> where T : IPoolable<T>
     {
-        private readonly Stack<T> _ready = new Stack<T>();
-        private readonly Queue<T> _using = new Queue<T>();
+        private readonly Stack<IPoolable<T>> _ready = new Stack<IPoolable<T>>();
+        private readonly List<IPoolable<T>> _using = new List<IPoolable<T>>();
 
-        public T Prefab { get; private set; }
-        
-        private int _capacity;
+        private readonly T _prefab;
+        private readonly int _capacity;
+        private readonly Transform _holder;
 
-        protected void Initialize(T prefab, int capacity)
+        private Pool(T prefab, int capacity, Transform holder)
         {
-            Prefab = prefab;
+            _prefab = prefab;
             _capacity = capacity;
-            
-            Increase();
+            _holder = holder;
         }
 
-        public void ToPool(T item)
+        public static Pool<T> Create(T prefab, int capacity, string holderName = "Pool")
         {
-            _ready.Push(item);
+            var obj = new GameObject(holderName);
+            var pool = new Pool<T>(prefab, capacity, obj.transform);
+            pool.Increase();
+            return pool;
         }
 
-        public T FromPool()
+        public void ToPool(IPoolable<T> item)
+        {
+            if(!_ready.Contains(item)) _ready.Push(item);
+            if (_using.Contains(item)) _using.Remove(item);
+        }
+
+        public IPoolable<T> FromPool()
         {
             if (_ready.Count == 0)
             {
-                _using.Dequeue().Disable();
+                _using[0].Disable();
             }
 
-            T item = _ready.Pop();
-            _using.Enqueue(item);
+            var item = _ready.Pop();
+            _using.Add(item);
             
             return item;
         }
 
         public void ToPoolAll()
         {
-            while (_using.Count > 0)
+            while (_using.Count != 0)
             {
-                _using.Dequeue().Disable();
+                _using[0].Disable();
             }
         }
 
@@ -50,10 +58,16 @@ namespace ObjectPool
         {
             for (int i = 0; i < _capacity; i++)
             {
-                ToPool(Clone());
+                Clone();
             }
         }
 
-        protected abstract T Clone();
+        private void Clone()
+        {
+            var obj = Object.Instantiate(_prefab as Object, _holder);
+            var clone = (IPoolable<T>) obj;
+            clone.Pool = this;
+            clone.Disable();
+        }
     }
 }

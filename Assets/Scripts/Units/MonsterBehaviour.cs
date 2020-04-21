@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TankProject.Units
 {
-    public abstract class MonsterBehaviour : AliveUnitBehaviour
+    public abstract class MonsterBehaviour : MovableUnitBehaviour
     {
         public static event Action<MonsterBehaviour> OnMonsterDie;
         

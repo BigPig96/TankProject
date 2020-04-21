@@ -1,4 +1,5 @@
-﻿using Lib;
+﻿using System;
+using Lib;
 using ObjectPool;
 using UnityEngine;
 
@@ -22,6 +23,16 @@ namespace TankProject.Shells
             _destruction = this.WaitForSeconds(lifetime, Disable);
         }
 
+        protected virtual void OnCollisionEnter2D(Collision2D other)
+        {
+            Destruct();
+        }
+
+        protected virtual void Destruct()
+        {
+            Disable();
+        }
+
         public virtual void Enable(Vector2 position, Quaternion rotation)
         {
             transform.position = position;
@@ -32,10 +43,10 @@ namespace TankProject.Shells
             _destruction.Start();
         }
 
-        public virtual void Disable()
+        public void Disable()
         {
             gameObject.SetActive(false);
-            if (Pool != null) Pool.ToPool(this);
+            Pool?.ToPool(this);
         }
     }
 }

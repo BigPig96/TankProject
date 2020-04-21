@@ -1,5 +1,4 @@
 ﻿using ObjectPool;
-using TankProject.Pools;
 using TankProject.Shells;
 using UnityEngine;
 
@@ -10,11 +9,11 @@ namespace TankProject.Weapon
         [SerializeField] private TankShell shellPrefab;
         [SerializeField] private Transform launchPoint;
 
-        private ShellPool _shellPool;
+        private Pool<ShellBehaviour> _shellPool;
 
         public override void Initialize()
         {
-            _shellPool = ShellPool.Create(shellPrefab, 10, "Tank Shells");
+            _shellPool = Pool<ShellBehaviour>.Create(shellPrefab, 10, "Tank Shells");
             State = WeaponState.Idle;
         }
 

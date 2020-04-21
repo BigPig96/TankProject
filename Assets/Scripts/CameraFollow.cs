@@ -15,6 +15,11 @@ namespace TankProject
             GameManager.OnGameStart += OnGameStart;
         }
 
+        private void OnDisable()
+        {
+            GameManager.OnGameStart -= OnGameStart;
+        }
+
         private void OnGameStart()
         {
             FindPlayer();

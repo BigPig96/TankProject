@@ -17,7 +17,6 @@ namespace TankProject.Units
         {
             _health = GetComponent<Health>();
             _armor = GetComponent<Armor>();
-            _health.OnDie += OnDie;
         }
 
         protected virtual void OnDie()
@@ -37,6 +36,7 @@ namespace TankProject.Units
 
         public virtual void Enable(Vector2 position, Quaternion rotation)
         {
+            _health.OnDie += OnDie;
             transform.position = position;
             transform.rotation = rotation;
             
@@ -44,10 +44,11 @@ namespace TankProject.Units
             gameObject.SetActive(true);
         }
 
-        public virtual void Disable()
+        public void Disable()
         {
+            _health.OnDie += OnDie;
             gameObject.SetActive(false);
-            if (Pool != null) Pool.ToPool(this);
+            Pool?.ToPool(this);
         }
     }
 }

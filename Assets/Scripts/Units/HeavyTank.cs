@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TankProject.Units
 {
-    public sealed class HeavyTank : AliveUnitBehaviour
+    public sealed class HeavyTank : MovableUnitBehaviour
     {
         public static event Action OnPlayerDie;
         

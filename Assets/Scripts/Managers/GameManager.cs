@@ -19,7 +19,7 @@ namespace TankProject.Managers
 
         public GameState State { get; private set; }
 
-        private IGameInput _gameInput;
+        private IStartInput _startInput;
 
         private void Awake()
         {
@@ -27,7 +27,7 @@ namespace TankProject.Managers
             else Destroy(gameObject);
             
             State = GameState.ReadyToStart;
-            _gameInput = GetComponent<IGameInput>();
+            _startInput = GetComponent<IStartInput>();
         }
 
         private void OnEnable()
@@ -42,7 +42,7 @@ namespace TankProject.Managers
 
         private void Update()
         {
-            if(State == GameState.ReadyToStart &&  _gameInput.IsGameStart())
+            if(State == GameState.ReadyToStart &&  _startInput.IsGameStart())
                 StartGame();
         }
 
