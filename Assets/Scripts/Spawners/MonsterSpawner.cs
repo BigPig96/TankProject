@@ -4,7 +4,7 @@ using Random = UnityEngine.Random;
 
 namespace TankProject.Spawners
 {
-    public class MonsterSpawner<T> : SpawnerBase where T : ObjectPool.IPoolable<T>
+    public sealed class MonsterSpawner<T> : SpawnerBase where T : ObjectPool.IPoolable<T>
     {
         private readonly Transform[] _spawnPoints;
         private readonly Pool<T> _pool;

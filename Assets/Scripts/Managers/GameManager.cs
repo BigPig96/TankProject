@@ -18,10 +18,9 @@ namespace TankProject.Managers
 
         public GameState State { get; private set; }
 
-        private IStartInput _startInput;
-
-        [Inject]
-        private void InstallBindings(IStartInput startInput)
+        private readonly IStartInput _startInput;
+        
+        public GameManager(IStartInput startInput)
         {
             _startInput = startInput;
         }

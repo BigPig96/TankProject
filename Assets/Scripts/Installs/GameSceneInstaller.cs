@@ -19,8 +19,8 @@ public class GameSceneInstaller : MonoInstaller
     
     [SerializeField] private Transform tankSpawnPoint;
     [SerializeField] private Transform[] simpleMonsterSpawnPoints;
-    [SerializeField] private Transform[] tankMonsterSpawnPoint;
-    [SerializeField] private Transform[] bomberMonsterSpawnPoint;
+    [SerializeField] private Transform[] tankMonsterSpawnPoints;
+    [SerializeField] private Transform[] bomberMonsterSpawnPoints;
     
     public override void InstallBindings()
     {
@@ -35,9 +35,9 @@ public class GameSceneInstaller : MonoInstaller
         Container.Bind<MonsterSpawner<SimpleMonster>>().AsSingle()
             .WithArguments(simpleMonsterSpawnPoints);
         Container.Bind<MonsterSpawner<TankMonster>>().AsSingle()
-            .WithArguments(tankMonsterSpawnPoint);
+            .WithArguments(tankMonsterSpawnPoints);
         Container.Bind<MonsterSpawner<BomberMonster>>().AsSingle()
-            .WithArguments(bomberMonsterSpawnPoint);
+            .WithArguments(bomberMonsterSpawnPoints);
         
         Container.Bind<Explode>().AsCached().WithArguments(tankShellExplosionData).WhenInjectedInto<TankShell>();
         Container.Bind<Explode>().AsCached().WithArguments(heavyTankExplosionData).WhenInjectedInto<HeavyTank>();
