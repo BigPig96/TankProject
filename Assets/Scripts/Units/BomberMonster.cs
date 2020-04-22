@@ -8,8 +8,10 @@ namespace TankProject.Units
     {
         public Pool<BomberMonster> Pool { get; set; }
 
+        [SerializeField] private float selfDamage;
+        
         private Explode _explode;
-        private bool _isExploded;
+        private Vector2 _diePosition;
 
         [Inject]
         private void InstallBindings(Explode explode)
@@ -17,17 +19,9 @@ namespace TankProject.Units
             _explode = explode;
         }
 
-        public override void Enable(Vector2 position, Quaternion rotation)
-        {
-            base.Enable(position, rotation);
-            
-            _isExploded = false;
-        }
-
         protected override void OnAttack()
         {
-            if(!_isExploded)
-                OnDie();
+            TakeDamage(selfDamage);
         }
 
         public override void Disable()
@@ -39,6 +33,7 @@ namespace TankProject.Units
 
         protected override void OnDie()
         {
+            _diePosition = transform.position;
             base.OnDie();
             
             Explode();
@@ -46,9 +41,7 @@ namespace TankProject.Units
 
         private void Explode()
         {
-            _isExploded = true;
-            Vector2 position = transform.position;
-            _explode.Execute(position);
+            _explode.Execute(_diePosition);
         }
     }
 }

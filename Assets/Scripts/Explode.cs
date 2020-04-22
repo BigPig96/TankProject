@@ -32,8 +32,8 @@ namespace TankProject
             foreach (var hit in _targets)
             {
                 if (hit == null) continue;
-                IDamagable damagable = hit.gameObject.GetComponent<IDamagable>();
-                damagable?.TakeDamage(_damage);
+                IDamagable unit = hit.gameObject.GetComponent<IDamagable>();
+                unit?.TakeDamage(_damage);
             }
             
             var effect = _pool.FromPool();

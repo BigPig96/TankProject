@@ -1,32 +1,35 @@
-﻿using TankProject.Spawners;
+﻿using System;
+using TankProject.Spawners;
 using TankProject.Units;
-using UnityEngine;
+using Zenject;
 using Random = UnityEngine.Random;
 
 namespace TankProject.Managers
 {
-    public sealed class MonsterManager : MonoBehaviour
+    public sealed class MonsterManager : IInitializable, IDisposable
     {
-        public static MonsterManager Instance { get; private set; }
+        public static int MonstersKilled { get; private set; }
 
-        public int KilledCount { get; private set; }
+        private readonly int _monstersOnScene;
+        private readonly SpawnerBase[] _spawners;
 
-        [SerializeField] private int monstersOnScene;
-        [SerializeField] private SpawnerBase[] spawners;
-        
-        private void Awake()
+        public MonsterManager(int monstersOnScene, MonsterSpawner<SimpleMonster> simpleMonster,
+            MonsterSpawner<TankMonster> tankMonster, MonsterSpawner<BomberMonster> bomberMonster)
         {
-            if (Instance == null) Instance = this;
-            else Destroy(gameObject);
+            _monstersOnScene = monstersOnScene;
+            _spawners = new SpawnerBase[3];
+            _spawners[0] = simpleMonster;
+            _spawners[1] = tankMonster;
+            _spawners[2] = bomberMonster;
         }
-
-        private void OnEnable()
+        
+        public void Initialize()
         {
             MonsterBehaviour.OnMonsterDie += OnMonsterDie;
             GameManager.OnGameStart += OnGameStarted;
         }
 
-        private void OnDisable()
+        public void Dispose()
         {
             MonsterBehaviour.OnMonsterDie -= OnMonsterDie;
             GameManager.OnGameStart -= OnGameStarted;
@@ -41,13 +44,13 @@ namespace TankProject.Managers
 
         private void OnMonsterDie(MonsterBehaviour monster)
         {
+            MonstersKilled++;
             SpawnRandomMonster();
-            KilledCount++;
         }
 
         private void StartSpawn()
         {
-            for (int i = 0; i < monstersOnScene; i++)
+            for (int i = 0; i < _monstersOnScene; i++)
             {
                 SpawnRandomMonster();
             }
@@ -55,13 +58,13 @@ namespace TankProject.Managers
 
         private void SpawnRandomMonster()
         {
-            int randomIndex = Random.Range(0, spawners.Length);
-            spawners[randomIndex].Spawn();
+            int randomIndex = Random.Range(0, _spawners.Length);
+            _spawners[randomIndex].Spawn();
         }
 
         private void DeleteAllMonsters()
         {
-            foreach (var spawner in spawners)
+            foreach (var spawner in _spawners)
             {
                 spawner.DeleteAll();
             }

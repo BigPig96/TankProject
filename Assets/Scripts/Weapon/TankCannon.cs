@@ -7,7 +7,6 @@ namespace TankProject.Weapon
 {
     public sealed class TankCannon : WeaponBehaviour
     {
-        [SerializeField] private TankShell shellPrefab;
         [SerializeField] private Transform launchPoint;
 
         private Pool<TankShell> _shellPool;
@@ -18,17 +17,10 @@ namespace TankProject.Weapon
             _shellPool = pool;
         }
 
-        public override void Initialize()
+        protected override void Launch()
         {
-            State = WeaponState.Idle;
-        }
-
-        public override void Fire()
-        {
-            if (_shellPool == null || State != WeaponState.Idle) return;
             var shell = _shellPool.FromPool();
             shell.Enable(launchPoint.position, launchPoint.rotation);
-            State = WeaponState.Reloading;
         }
     }
 }

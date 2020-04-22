@@ -12,6 +12,7 @@ namespace TankProject
         [SerializeField] private float maxHealth = 100f;
         public float MaxHealth => maxHealth;
         public float CurrentHealth { get; private set; }
+        
 
         public void ResetHealth()
         {
@@ -26,7 +27,12 @@ namespace TankProject
         public void TakeDamage(float damage)
         {
             ChangeHealth(CurrentHealth - damage);
-            if (CurrentHealth <= 0) OnDie?.Invoke();
+            if (CurrentHealth <= 0) Die();
+        }
+
+        private void Die()
+        {
+            OnDie?.Invoke();
         }
         
         private void ChangeHealth(float health)

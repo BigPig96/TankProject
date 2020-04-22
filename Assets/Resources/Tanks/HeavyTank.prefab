@@ -454,9 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821fb24b0dd06d240abffc023873c62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadingDelay: 0.1
-  laserPrefab: {fileID: 3165539696669888793, guid: d7630bd5a78777049adc1c65fd14cff8,
-    type: 3}
+  delayBetweenShots: 0.1
   launchPoint: {fileID: 717124926817831319}
 --- !u!1 &7260643266468349193
 GameObject:
@@ -1078,7 +1076,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerBehaviour: {fileID: 862783240}
-  dieExplosion: {fileID: 11400000, guid: d54d931b0bceef34383227f46913cc6e, type: 2}
 --- !u!114 &6150554812233581601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1382,7 +1379,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515f1734d6e1351438af86956be28bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadingDelay: 1
-  shellPrefab: {fileID: 1131887611943549534, guid: bed2151b011e77f40ac5337370c55005,
-    type: 3}
+  delayBetweenShots: 1
   launchPoint: {fileID: 7695968453930012816}

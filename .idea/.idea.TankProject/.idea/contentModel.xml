@@ -379,8 +379,6 @@
           <e p="ExplosionData.cs" t="Include" />
           <e p="Factories" t="Include">
             <e p="ResourcesPrefabFactory.cs" t="Include" />
-            <e p="UnitFactory.cs" t="Include" />
-            <e p="VfxFactory.cs" t="Include" />
           </e>
           <e p="GameEventScreenLogger.cs" t="Include" />
           <e p="GameZone.cs" t="Include" />
@@ -414,12 +412,9 @@
             <e p="TankShell.cs" t="Include" />
           </e>
           <e p="Spawners" t="Include">
-            <e p="BomberMonsterSpawner.cs" t="Include" />
             <e p="HeavyTankSpawner.cs" t="Include" />
             <e p="MonsterSpawner.cs" t="Include" />
-            <e p="SimpleMonsterSpawner.cs" t="Include" />
             <e p="SpawnerBase.cs" t="Include" />
-            <e p="TankMonsterSpawner.cs" t="Include" />
           </e>
           <e p="StartBox.cs" t="Include" />
           <e p="TowerBehaviour.cs" t="Include" />

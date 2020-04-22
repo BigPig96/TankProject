@@ -5,15 +5,13 @@ using Zenject;
 
 namespace TankProject.Managers
 {
-    public sealed class GameManager : MonoBehaviour
+    public sealed class GameManager : ITickable, IInitializable, IDisposable
     {
         public enum GameState
         {
             ReadyToStart,
             InGame
         }
-        
-        public static GameManager Instance { get; private set; }
 
         public static event Action OnGameStart;
         public static event Action OnGameOver;
@@ -28,25 +26,18 @@ namespace TankProject.Managers
             _startInput = startInput;
         }
 
-        private void Awake()
+        public void Initialize()
         {
-            if (Instance == null) Instance = this;
-            else Destroy(gameObject);
-            
             State = GameState.ReadyToStart;
-        }
-
-        private void OnEnable()
-        {
             HeavyTank.OnPlayerDie += OnPlayerDie;
         }
 
-        private void OnDisable()
+        public void Dispose()
         {
             HeavyTank.OnPlayerDie -= OnPlayerDie;
         }
-
-        private void Update()
+        
+        public void Tick()
         {
             if(State == GameState.ReadyToStart &&  _startInput.IsGameStart())
                 StartGame();

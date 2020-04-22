@@ -1,34 +1,31 @@
-﻿using TankProject.Spawners;
-using UnityEngine;
+﻿using System;
+using TankProject.Spawners;
+using Zenject;
 
 namespace TankProject.Managers
 {
-    public sealed class TankManager : MonoBehaviour
+    public sealed class TankManager : IInitializable, IDisposable
     {
-        public static TankManager Instance { get; private set; }
+        private readonly HeavyTankSpawner _tankSpawner;
 
-        [SerializeField] private HeavyTankSpawner tankSpawner;
-        
-
-        private void Awake()
+        public TankManager(HeavyTankSpawner spawner)
         {
-            if (Instance == null) Instance = this;
-            else Destroy(gameObject);
+            _tankSpawner = spawner;
         }
 
-        private void OnEnable()
+        public void Initialize()
         {
             GameManager.OnGameStart += OnGameStarted;
         }
 
-        private void OnDisable()
+        public void Dispose()
         {
             GameManager.OnGameStart -= OnGameStarted;
         }
 
         private void OnGameStarted()
         {
-            tankSpawner.Spawn();
+            _tankSpawner.Spawn();
         }
     }
 }

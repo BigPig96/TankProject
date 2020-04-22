@@ -46,7 +46,6 @@ namespace TankProject.Units
             base.OnDie();
             
             OnMonsterDie?.Invoke(this);
-            Debug.Log(name);
         }
 
         public void ChangeBodyType(RigidbodyType2D type)

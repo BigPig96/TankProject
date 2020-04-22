@@ -1,4 +1,5 @@
 ﻿using TankProject.Managers;
+using TankProject.Units;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -39,7 +40,7 @@ namespace TankProject
 
         public void ShowMessage()
         {
-            messageText.text = string.Format(message, MonsterManager.Instance.KilledCount.ToString());
+            messageText.text = string.Format(message, MonsterManager.MonstersKilled.ToString());
         }
 
         public void ClearMessage()

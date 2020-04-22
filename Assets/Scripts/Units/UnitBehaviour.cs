@@ -1,6 +1,4 @@
-﻿using ObjectPool;
-using UnityEditor.Experimental.GraphView;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TankProject.Units
 {
@@ -15,12 +13,7 @@ namespace TankProject.Units
         {
             _health = GetComponent<Health>();
             _armor = GetComponent<Armor>();
-        }
-        
-
-        protected virtual void OnDie()
-        {
-            Disable();
+            
         }
 
         public void TakeDamage(float damage)
@@ -35,10 +28,10 @@ namespace TankProject.Units
 
         public virtual void Enable(Vector2 position, Quaternion rotation)
         {
-            _health.OnDie += OnDie;
             transform.position = position;
             transform.rotation = rotation;
             
+            _health.OnDie += OnDie;
             ResetHealth();
             gameObject.SetActive(true);
         }
@@ -47,6 +40,11 @@ namespace TankProject.Units
         {
             _health.OnDie -= OnDie;
             gameObject.SetActive(false);
+        }
+        
+        protected virtual void OnDie()
+        {
+            Disable();
         }
     }
 }

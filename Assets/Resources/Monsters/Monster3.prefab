@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 1335908231653971199}
   - component: {fileID: 6481967144577575280}
   m_Layer: 10
-  m_Name: Monster 3
+  m_Name: Monster3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -510,7 +510,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2304
   attackDelay: 0.5
-  explosion: {fileID: 11400000, guid: d45ed7e97834f884f85b37fbce70aa61, type: 2}
+  selfDamage: 30
 --- !u!114 &6296059259920231069
 MonoBehaviour:
   m_ObjectHideFlags: 0

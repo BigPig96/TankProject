@@ -8,27 +8,27 @@ namespace TankProject.Weapon
         protected enum WeaponState
         {
             Idle,
-            Reloading
+            DelayBetweenShots
         }
         
-        [SerializeField] private float reloadingDelay;
+        [SerializeField] private float delayBetweenShots;
 
-        private float _reloadingTimer;
+        private float _waitBetweenShots;
         
         protected WeaponState State;
 
-        protected void Update()
+        protected virtual void Update()
         {
-            Reloading();
+            WaitShotsDelayProcess();
         }
 
-        private void Reloading()
+        private void WaitShotsDelayProcess()
         {
-            if(State != WeaponState.Reloading) return;
-            _reloadingTimer += Time.deltaTime;
-            if(_reloadingTimer < reloadingDelay) return;
+            if(State != WeaponState.DelayBetweenShots) return;
+            _waitBetweenShots += Time.deltaTime;
+            if(_waitBetweenShots < delayBetweenShots) return;
             State = WeaponState.Idle;
-            _reloadingTimer = 0;
+            _waitBetweenShots = 0;
         }
         
         public virtual void Activate()
@@ -41,7 +41,17 @@ namespace TankProject.Weapon
             gameObject.SetActive(false);
         }
 
-        public abstract void Initialize();
-        public abstract void Fire();
+        public virtual void Initialize()
+        {
+            State = WeaponState.Idle;
+        }
+        
+        public void Fire()
+        {
+            if(State == WeaponState.Idle) Launch();
+            State = WeaponState.DelayBetweenShots;
+        }
+        
+        protected abstract void Launch();
     }
 }

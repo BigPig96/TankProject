@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using UnityEngine;
 using Zenject;
 
 namespace ObjectPool
@@ -21,14 +20,6 @@ namespace ObjectPool
 
             Increase();
         }
-
-        // public static Pool<T> Create(T prefab, int capacity, string holderName = "Pool")
-        // {
-        //     var obj = new GameObject(holderName);
-        //     var pool = new Pool<T>(prefab, "", capacity, obj.transform);
-        //     pool.Increase();
-        //     return pool;
-        // }
 
         public void ToPool(IPoolable<T> item)
         {

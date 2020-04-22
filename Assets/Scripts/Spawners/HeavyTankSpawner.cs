@@ -7,20 +7,19 @@ namespace TankProject.Spawners
 {
     public sealed class HeavyTankSpawner : SpawnerBase
     {
-        [SerializeField] private Transform spawnPoint;
-
-        private Pool<HeavyTank> _tankPool;
-
-        [Inject]
-        private void InstallBindings(Pool<HeavyTank> pool)
+        private readonly Transform _spawnPoint;
+        private readonly Pool<HeavyTank> _tankPool;
+        
+        public HeavyTankSpawner(Pool<HeavyTank> pool, Transform spawnPoint)
         {
             _tankPool = pool;
+            _spawnPoint = spawnPoint;
         }
         
         public override void Spawn()
         {
             var tank = _tankPool.FromPool();
-            tank.Enable(spawnPoint.position, spawnPoint.rotation);
+            tank.Enable(_spawnPoint.position, _spawnPoint.rotation);
         }
 
         public override void DeleteAll()

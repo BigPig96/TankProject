@@ -1,20 +1,18 @@
 ﻿using ObjectPool;
 using UnityEngine;
-using Zenject;
 using Random = UnityEngine.Random;
 
 namespace TankProject.Spawners
 {
     public class MonsterSpawner<T> : SpawnerBase where T : ObjectPool.IPoolable<T>
     {
-        [SerializeField] protected Transform[] _spawnPoints;
+        private readonly Transform[] _spawnPoints;
+        private readonly Pool<T> _pool;
         
-        private Pool<T> _pool;
-        
-        [Inject]
-        public void InstallBindings(Pool<T> pool)
+        public MonsterSpawner(Pool<T> pool, Transform[] spawnPoints)
         {
             _pool = pool;
+            _spawnPoints = spawnPoints;
         }
 
         public override void Spawn()
