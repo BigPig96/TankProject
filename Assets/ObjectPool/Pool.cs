@@ -3,7 +3,7 @@ using Zenject;
 
 namespace ObjectPool
 {
-    public sealed class Pool<T> where T : IPoolable<T>
+    public sealed class Pool<T> : IInitializable where T : IPoolable<T>
     {
         private readonly Stack<IPoolable<T>> _ready = new Stack<IPoolable<T>>();
         private readonly List<IPoolable<T>> _using = new List<IPoolable<T>>();
@@ -15,7 +15,10 @@ namespace ObjectPool
         {
             _factory = factory;
             _capacity = capacity;
-
+        }
+        
+        public void Initialize()
+        {
             Increase();
         }
 

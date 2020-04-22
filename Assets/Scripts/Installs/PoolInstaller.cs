@@ -24,7 +24,7 @@ namespace TankProject.Installers
             Container.BindIFactory<T>()
                 .FromComponentInNewPrefabResource(prefabPath)
                 .AsCached();
-            Container.Bind<Pool<T>>()
+            Container.BindInterfacesAndSelfTo<Pool<T>>()
                 .AsSingle()
                 .WithArguments(capacity)
                 .NonLazy();

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73e87c32-1ac6-4c9b-a047-c5cae8adb026" name="Default Changelist" comment="" />
+    <list default="true" id="73e87c32-1ac6-4c9b-a047-c5cae8adb026" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TankProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TankProject/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,8 +142,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Installs/SpawnerInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installs/ExplodeInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Factories/ResourcesPrefabFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/ObjectPool/Pool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installs/PoolInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/ObjectPool/Pool.cs" />
       </list>
     </option>
   </component>
@@ -196,7 +198,7 @@
       <workItem from="1587531088925" duration="5365000" />
       <workItem from="1587539521339" duration="863000" />
       <workItem from="1587542827215" duration="1014000" />
-      <workItem from="1587546087563" duration="386000" />
+      <workItem from="1587546087563" duration="1307000" />
     </task>
     <servers />
   </component>
