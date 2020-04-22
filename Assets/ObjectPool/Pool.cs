@@ -11,7 +11,7 @@ namespace ObjectPool
         private readonly IFactory<T> _factory;
         private readonly int _capacity;
 
-        private Pool(IFactory<T> factory, string prefabPath, int capacity)
+        private Pool(IFactory<T> factory, int capacity)
         {
             _factory = factory;
             _capacity = capacity;
