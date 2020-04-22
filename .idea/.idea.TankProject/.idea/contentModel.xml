@@ -391,7 +391,10 @@
             <e p="TankWeaponInput.cs" t="Include" />
           </e>
           <e p="Installs" t="Include">
-            <e p="GameSceneInstaller.cs" t="Include" />
+            <e p="ExplodeInstaller.cs" t="Include" />
+            <e p="ManagerInstaller.cs" t="Include" />
+            <e p="PoolInstaller.cs" t="Include" />
+            <e p="SpawnerInstaller.cs" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
             <e p="IController.cs" t="Include" />

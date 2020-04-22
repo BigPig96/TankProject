@@ -1,6 +1,6 @@
 ﻿using Zenject;
 
-namespace Tank.Factories
+namespace TankProject.Factories
 {
     public sealed class ResourcesPrefabFactory<T> : IFactory<string, T>
     {
