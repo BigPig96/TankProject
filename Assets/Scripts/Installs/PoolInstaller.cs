@@ -26,7 +26,7 @@ namespace TankProject.Installers
                 .AsCached();
             Container.Bind<Pool<T>>()
                 .AsSingle()
-                .WithArguments(capacity, prefabPath)
+                .WithArguments(capacity)
                 .NonLazy();
         }
     }

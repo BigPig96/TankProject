@@ -9,13 +9,11 @@ namespace ObjectPool
         private readonly List<IPoolable<T>> _using = new List<IPoolable<T>>();
 
         private readonly IFactory<T> _factory;
-        private readonly string _prefabPath;
         private readonly int _capacity;
 
         private Pool(IFactory<T> factory, string prefabPath, int capacity)
         {
             _factory = factory;
-            _prefabPath = prefabPath;
             _capacity = capacity;
 
             Increase();
