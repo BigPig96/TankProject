@@ -202,7 +202,7 @@
       <workItem from="1587497469582" duration="306000" />
       <workItem from="1587531088925" duration="5365000" />
       <workItem from="1587539521339" duration="863000" />
-      <workItem from="1587542827215" duration="662000" />
+      <workItem from="1587542827215" duration="1014000" />
     </task>
     <servers />
   </component>
@@ -301,9 +301,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587319571799" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587543434020">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587546204872">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587543434020" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587546204872" />
   </component>
 </project>

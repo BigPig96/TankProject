@@ -1,5 +1,4 @@
 using ObjectPool;
-using TankProject.Factories;
 using TankProject.Shells;
 using TankProject.Units;
 using TankProject.Vfx;
@@ -22,7 +21,9 @@ namespace TankProject.Installers
 
         private void BindSinglePool<T>(int capacity, string prefabPath) where T : ObjectPool.IPoolable<T>
         {
-            Container.BindIFactory<string, T>().FromFactory<ResourcesPrefabFactory<T>>();
+            Container.BindIFactory<T>()
+                .FromComponentInNewPrefabResource(prefabPath)
+                .AsCached();
             Container.Bind<Pool<T>>()
                 .AsSingle()
                 .WithArguments(capacity, prefabPath)

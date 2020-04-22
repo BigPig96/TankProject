@@ -8,11 +8,11 @@ namespace ObjectPool
         private readonly Stack<IPoolable<T>> _ready = new Stack<IPoolable<T>>();
         private readonly List<IPoolable<T>> _using = new List<IPoolable<T>>();
 
-        private readonly IFactory<string, T> _factory;
+        private readonly IFactory<T> _factory;
         private readonly string _prefabPath;
         private readonly int _capacity;
 
-        private Pool(IFactory<string, T> factory, string prefabPath, int capacity)
+        private Pool(IFactory<T> factory, string prefabPath, int capacity)
         {
             _factory = factory;
             _prefabPath = prefabPath;
@@ -58,7 +58,7 @@ namespace ObjectPool
 
         private void Clone()
         {
-            var clone = _factory.Create(_prefabPath);
+            var clone = _factory.Create();
             clone.Pool = this;
             clone.Disable();
         }

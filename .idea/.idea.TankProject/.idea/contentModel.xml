@@ -377,9 +377,6 @@
           </e>
           <e p="Explode.cs" t="Include" />
           <e p="ExplosionData.cs" t="Include" />
-          <e p="Factories" t="Include">
-            <e p="ResourcesPrefabFactory.cs" t="Include" />
-          </e>
           <e p="GameEventScreenLogger.cs" t="Include" />
           <e p="GameZone.cs" t="Include" />
           <e p="Health.cs" t="Include" />
