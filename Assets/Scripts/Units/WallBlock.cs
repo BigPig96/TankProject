@@ -1,5 +1,6 @@
-﻿using TankProject.Units;
-
-public sealed class WallBlock : UnitBehaviour
+﻿namespace TankProject.Units
 {
+    public sealed class WallBlock : UnitBehaviour
+    {
+    }
 }

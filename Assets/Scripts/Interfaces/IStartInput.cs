@@ -1,4 +1,7 @@
-﻿public interface IStartInput
-{ 
-    bool IsGameStart();
+﻿namespace TankProject.Interfaces
+{
+    public interface IStartInput
+    { 
+        bool IsGameStart();
+    }
 }

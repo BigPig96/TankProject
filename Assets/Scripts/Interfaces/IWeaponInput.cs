@@ -1,4 +1,4 @@
-﻿namespace TankProject
+﻿namespace TankProject.Interfaces
 {
     public interface IWeaponInput
     {

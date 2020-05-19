@@ -2,7 +2,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace TankProject.Shells
+namespace TankProject.Shell
 {
     public sealed class TankShell : ShellBehaviour, ObjectPool.IPoolable<TankShell>
     {

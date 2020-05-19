@@ -1,7 +1,8 @@
 ﻿using ObjectPool;
+using TankProject.Interfaces;
 using UnityEngine;
 
-namespace TankProject.Shells
+namespace TankProject.Shell
 {
     public sealed class LaserShell : ShellBehaviour, IPoolable<LaserShell>
     {

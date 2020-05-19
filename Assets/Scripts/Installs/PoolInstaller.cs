@@ -1,10 +1,10 @@
 using ObjectPool;
-using TankProject.Shells;
+using TankProject.Shell;
 using TankProject.Units;
 using TankProject.Vfx;
 using Zenject;
 
-namespace TankProject.Installers
+namespace TankProject.Installs
 {
     public class PoolInstaller : MonoInstaller
     {

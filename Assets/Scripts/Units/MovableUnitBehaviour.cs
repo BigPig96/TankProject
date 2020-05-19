@@ -1,4 +1,6 @@
-﻿namespace TankProject.Units
+﻿using TankProject.Interfaces;
+
+namespace TankProject.Units
 {
     public abstract class MovableUnitBehaviour : UnitBehaviour
     {

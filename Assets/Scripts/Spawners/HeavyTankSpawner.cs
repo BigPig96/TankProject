@@ -1,7 +1,6 @@
 ﻿using ObjectPool;
 using TankProject.Units;
 using UnityEngine;
-using Zenject;
 
 namespace TankProject.Spawners
 {

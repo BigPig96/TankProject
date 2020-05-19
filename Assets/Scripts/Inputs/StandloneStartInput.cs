@@ -1,6 +1,10 @@
-﻿using UnityEngine;
+﻿using TankProject.Interfaces;
+using UnityEngine;
 
-public sealed class StandloneStartInput : IStartInput
+namespace TankProject.Inputs
 {
-    public bool IsGameStart() => Input.GetKeyDown(KeyCode.Space);
+    public sealed class StandloneStartInput : IStartInput
+    {
+        public bool IsGameStart() => Input.GetKeyDown(KeyCode.Space);
+    }
 }

@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace TankProject.Spawners
+﻿namespace TankProject.Spawners
 {
     public abstract class SpawnerBase
     {

@@ -1,10 +1,9 @@
-using TankProject;
-using TankProject.Shells;
+using TankProject.Shell;
 using TankProject.Units;
 using UnityEngine;
 using Zenject;
 
-namespace TankProject.Installers
+namespace TankProject.Installs
 {
     public class ExplodeInstaller : MonoInstaller
     {

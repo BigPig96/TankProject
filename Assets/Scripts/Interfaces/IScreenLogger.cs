@@ -1,5 +1,8 @@
-﻿public interface IScreenLogger
+﻿namespace TankProject.Interfaces
 {
-    void ShowMessage();
-    void ClearMessage();
+    public interface IScreenLogger
+    {
+        void ShowMessage();
+        void ClearMessage();
+    }
 }

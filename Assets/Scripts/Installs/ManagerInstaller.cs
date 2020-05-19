@@ -1,8 +1,9 @@
+using TankProject.Inputs;
 using TankProject.Managers;
 using UnityEngine;
 using Zenject;
 
-namespace TankProject.Installers
+namespace TankProject.Installs
 {
     public class ManagerInstaller : MonoInstaller
     {

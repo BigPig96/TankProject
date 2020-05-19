@@ -1,9 +1,7 @@
-﻿using System;
-using Lib;
-using ObjectPool;
+﻿using Lib;
 using UnityEngine;
 
-namespace TankProject.Shells
+namespace TankProject.Shell
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public abstract class ShellBehaviour : MonoBehaviour

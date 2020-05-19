@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcc0cf03c55ff3d4a9573da8b2d7181d, type: 3}
-  m_Name: HeavyTankExplosion
+  m_Name: HeavyTankExplosionData
   m_EditorClassIdentifier: 
   damage: 70
   lesionRadius: 7

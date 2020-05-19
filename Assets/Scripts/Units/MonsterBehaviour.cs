@@ -1,5 +1,5 @@
 ﻿using System;
-using TankProject.Managers;
+using TankProject.Interfaces;
 using UnityEngine;
 
 namespace TankProject.Units

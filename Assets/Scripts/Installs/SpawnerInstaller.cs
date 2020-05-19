@@ -3,7 +3,7 @@ using TankProject.Units;
 using UnityEngine;
 using Zenject;
 
-namespace TankProject.Installers
+namespace TankProject.Installs
 {
     public class SpawnerInstaller : MonoInstaller
     {
